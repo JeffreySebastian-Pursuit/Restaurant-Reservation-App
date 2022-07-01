@@ -87,7 +87,7 @@ function AddRestaurant () {
         </label>
         <input
           value={newRestaurant.openingTime}
-          type="time"
+          type="text"
           id="openingTime"
           onChange={handleChange}
           placeholder="hh:mm:ss"
@@ -98,7 +98,7 @@ function AddRestaurant () {
         </label>
         <input
           value={newRestaurant.closingTime}
-          type="time"
+          type="text"
           id="closingTime"
           onChange={handleChange}
           placeholder="hh:mm:ss"
