@@ -1,0 +1,13 @@
+:root {
+  --color-1: #242526;
+  --color-2: white;
+  --color-3: #0084ff;
+  --color-4: grey;
+  --color-5: #eb4034;
+  --color-6: #333;
+}
+body{
+  background-color: var(--color-6);
+  color: var(--color-2);
+  font-family: "Copperplate";
+}

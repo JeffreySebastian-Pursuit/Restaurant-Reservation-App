@@ -1,0 +1,10 @@
+.Index {
+    padding: 2rem 0.5rem;
+    display: grid;
+    grid-template-areas: "center";
+    grid-template-columns: 1fr;
+    gap: 4rem;
+  }
+  .Index section {
+    margin: 0 2rem;
+  }
