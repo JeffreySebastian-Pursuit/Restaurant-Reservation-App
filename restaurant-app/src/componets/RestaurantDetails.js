@@ -238,7 +238,7 @@ function RestaurantDetails () {
               );
             } else
               return (
-                <li key={rsvp.id}>
+                <li key={rsvp.id} className='reservationLists'>
                   <Link exact to={`/reservations/${rsvp.id}`}>
                     <p>
                       Time: {moment (rsvp.time).format ('MM/DD/YYYY, h:mm a')}

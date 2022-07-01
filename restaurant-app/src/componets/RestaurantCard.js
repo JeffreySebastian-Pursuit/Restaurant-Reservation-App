@@ -15,7 +15,7 @@ function RestaurantCard({restaurant}) {
           <img src={randomImg} alt="pic" className='pic'/>
           <h1 className='title'>{restaurant.name}</h1>
           <p>{restaurant.cuisine}</p>
-          <p>Price; {restaurant.price}</p>
+          <p>Price: {restaurant.price}</p>
         </Link>
         </div>
       </div>

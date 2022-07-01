@@ -11,3 +11,6 @@ body{
   color: var(--color-2);
   font-family: "Copperplate";
 }
+a{
+  color: white;
+}

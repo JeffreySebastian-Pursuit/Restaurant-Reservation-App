@@ -22,14 +22,22 @@
     height: 500px;
     width: 500px;
     margin-bottom: 30px;
-    margin-right: 50px;
-    margin-top: 40px;
+    margin-left: 50px;
   }
   .description {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
   }
   li{
       list-style-type: none;
+  }
+  h3{
+    margin-left: 40px;
+  }
+  .reservationLists{
+      margin-left: 50px;
+      background-color: black;
+      border-radius: 10px;
+      /* padding: 5px; */
   }
   
   button {
