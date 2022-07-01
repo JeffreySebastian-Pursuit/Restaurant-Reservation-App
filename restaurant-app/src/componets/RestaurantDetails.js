@@ -126,10 +126,10 @@ function RestaurantDetails () {
         </p>
 
         <p>
-          Open: {restaurant.openingTime}
+          Open: {restaurant.openingTime} am
         </p>
         <p>
-          Close: {restaurant.closingTime}
+          Close: {restaurant.closingTime} pm
         </p>
 
         <p>

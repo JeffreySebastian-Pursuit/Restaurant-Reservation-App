@@ -57,6 +57,8 @@ div .main{
 }
 img{
     margin-bottom: 20px;
+    height: 100px;
+    width: 100px;
 }
 div .main .container {
   display: flex;
