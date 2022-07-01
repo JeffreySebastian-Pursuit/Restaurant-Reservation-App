@@ -168,3 +168,26 @@ div .main .container {
   background: #fff;
   color: #000;
 }
+
+
+
+
+@media screen and (max-width: 510px) {
+  div .main{
+    margin-top: 100px;
+    padding: 2rem 0.5rem;
+    display: flex;
+    flex-direction: column;
+  }
+
+}
+
+@media screen and (max-width: 710px) {
+  div .main{
+    margin-top: 100px;
+    padding: 2rem 0.5rem;
+    display: flex;
+   flex-direction: column;
+  }
+
+}

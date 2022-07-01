@@ -6,6 +6,9 @@ function NavBar({setSearchByRestaurant}) {
   return (
     <div>
 
+<div>
+
+
       <nav>
         <NavLink to="/">
           Home
@@ -15,16 +18,17 @@ function NavBar({setSearchByRestaurant}) {
         </NavLink>
         <input
         className='search'
-          type="text"
-          placeholder="Search by name"
-          onChange={e => {
-            setSearchByRestaurant (e.target.value);
-            
-          }}
+        type="text"
+        placeholder="Search by name"
+        onChange={e => {
+          setSearchByRestaurant (e.target.value);
+          
+        }}
         />
 
       </nav>
 
+        </div>
     </div>
   );
 }

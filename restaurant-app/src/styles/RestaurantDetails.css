@@ -73,6 +73,7 @@
       display: grid;
       font-size: 50px;
       grid-template-columns: auto;
+      margin-top: 100px;
     }
     .lists {
       margin-top: 40px;
@@ -112,6 +113,7 @@
       display: grid;
       font-size: 50px;
       grid-template-columns: auto;
+      margin-top: 100px;
     }
     .lists {
       margin-top: 40px;
@@ -145,6 +147,7 @@
       display: grid;
       font-size: 50px;
       grid-template-columns: auto;
+      margin-top: 200px;
     }
     .lists {
       margin-top: 40px;
@@ -178,6 +181,7 @@
       display: grid;
       font-size: 50px;
       grid-template-columns: auto;
+      margin-top: 150px;
     }
     .lists {
       margin-top: 40px;
@@ -210,6 +214,8 @@
     .heading {
       display: grid;
       grid-template-columns: auto;
+      margin-top: 150px;
+
     }
     .lists {
       margin-top: 40px;
@@ -243,6 +249,7 @@
     .heading {
       display: grid;
       grid-template-columns: auto;
+      margin-top: 150px;
     }
     .lists {
       margin-top: 40px;
@@ -276,6 +283,7 @@
     .heading {
       display: grid;
       grid-template-columns: auto;
+      margin-top: 100px;
     }
     .lists {
       margin-top: 40px;
@@ -309,6 +317,7 @@
     .heading {
       display: grid;
       grid-template-columns: auto;
+      margin-top: 150px;
     }
     .lists {
       margin-top: 40px;

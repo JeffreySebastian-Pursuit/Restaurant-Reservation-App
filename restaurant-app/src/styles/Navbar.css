@@ -1,76 +1,90 @@
 :root {
-    --color-1: #242526;
-    --color-2: white;
-    --color-3: #0084ff;
-    --color-4: grey;
-    --color-5: #eb4034;
-    --color-6: #333;
-  }
-  
-  .search{
-      width: 500px;
-      height: 50px;
-      border-radius: 20px;
-  }
-  
+  --color-1: #242526;
+  --color-2: white;
+  --color-3: #0084ff;
+  --color-4: grey;
+  --color-5: #eb4034;
+  --color-6: #333;
+}
+
+.search {
+  width: 500px;
+  height: 50px;
+  border-radius: 20px;
+  margin-top: 20px;
+}
+
+nav {
+  margin-bottom: 50px;
+  height: 5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--color-1);
+  padding: 0 2rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+}
+
+nav a {
+  text-decoration: none;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  font-family: "Copperplate";
+}
+a:hover {
+  text-decoration: none;
+}
+
+nav img {
+  max-width: 50px;
+}
+
+nav .active {
+  background-color: rgba(225, 225, 225, 0.2);
+  border-radius: 8px;
+  padding: 0.5rem 1rem;
+}
+
+nav div {
+  width: 600px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 18px;
+  font-weight: 400;
+}
+
+@media screen and (max-width: 660px) {
+
   nav {
-    margin-bottom: 50px;
-    height: 5rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: var(--color-1);
-    padding: 0 2rem;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 100;
+    padding: 0 1rem;
+    height: 170px;
   }
 
-  nav a {
-    text-decoration: none;
-    color: #fff;
-    padding: 0.5rem 1rem;
-    
-  }
-  a:hover{
-      text-decoration: none;
-  }
-  
-  nav img {
-    max-width: 50px;
-  }
-  
-  nav .active {
-    background-color: rgba(225, 225, 225, 0.2);
-    border-radius: 8px;
-    padding: 0.5rem 1rem;
-  }
-  
   nav div {
-    width: 600px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font-size: 18px;
-    font-weight: 400;
+    width: 4rem;
+    justify-content: center;
   }
-  
-  
-  @media screen and (max-width: 960px) {
-    nav {
-      padding: 0 1rem;
-    }
-  
-    nav div {
-      width: 4rem;  
-      justify-content: center;
-    }
-    nav div a {
-      display: none;
-    }
-  
-    
+  nav div a {
+    display: none;
+    font-size: 25px;
   }
-  
+
+  .search {
+   margin-top: 100px;
+    width: 200px;
+    height: 50px;
+    margin-right: 100px;
+    margin-left: -250px;
+  }
+
+
+  nav a {
+   margin-top: -50px;
+   margin-left: 20px;
+  }
+}

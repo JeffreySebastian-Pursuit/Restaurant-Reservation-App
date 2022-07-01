@@ -81,18 +81,6 @@ function RestaurantDetails () {
   const handleSubmit = e => {
     createReservation (newReservation);
     alert ('You just created a new reservation');
-
-    // if(newReservation.time.includes( moment (newReservation.time).format ('MM/DD/YYYY, h:mm a'))){
-    //   if(moment (newReservation.time).format ('h:mm a') === newReservation.time){
-    //     alert ('Please pick a different time!');
-    //     e.preventDefault()
-    //   }else{
-    //     createReservation (newReservation);
-    //     alert ('You just created a new reservation');
-    //   }
-    //   createReservation (newReservation);
-    //   alert ('You just created a new reservation');
-    // }
   };
 
   const {
@@ -224,8 +212,6 @@ function RestaurantDetails () {
         </form>
       </div>
       <ul>
-        {/* {restaurant.diningRestriction} */}
-
         <img src={randomImg} alt="pic" className="restaurantImage" />
         <h3>Reservation lists</h3>
         {!loading &&
@@ -238,7 +224,7 @@ function RestaurantDetails () {
               );
             } else
               return (
-                <li key={rsvp.id} className='reservationLists'>
+                <li key={rsvp.id} className="reservationLists">
                   <Link exact to={`/reservations/${rsvp.id}`}>
                     <p>
                       Time: {moment (rsvp.time).format ('MM/DD/YYYY, h:mm a')}
