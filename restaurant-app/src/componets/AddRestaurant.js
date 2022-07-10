@@ -7,6 +7,9 @@ import {randomImg} from '../helpers/randomImage';
 
 function AddRestaurant () {
   const minDate = new Date ().toLocaleDateString ();
+  const restrictions = ['Takeout Only', 'Delivery Only']
+
+
   const [newRestaurant, setNewRestaurant] = useState ({
     name: '',
     description: '',
@@ -33,6 +36,7 @@ function AddRestaurant () {
 
   const handleChange = e => {
     setNewRestaurant ({...newRestaurant, [e.target.id]: e.target.value});
+    // setRestriction(e.target.value)
   };
 
   console.log(newRestaurant)
@@ -145,14 +149,23 @@ function AddRestaurant () {
           Dining Restriction:
         </label>
 
-        <input
+        {/* <input
           value={newRestaurant.diningRestriction}
           type="text"
           id="diningRestriction"
           onChange={handleChange}
           placeholder="Dining Restriction"
           required
-        />
+        /> */}
+        
+          {/* <label htmlFor="category">Dining Restriction</label> */}
+          <select id="diningRestriction" onChange={handleChange} defaultValue="Select Dining Restriction">
+          <option disabled>Select Dining Restriction</option>
+          {restrictions.map(restriction => {
+            return <option key={restriction} value={restriction || null} >{restriction} </option>
+          })}
+        </select>
+        
 
         <button className="submit-item-form" type="submit">
           Submit
