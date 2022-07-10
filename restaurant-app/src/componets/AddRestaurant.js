@@ -7,14 +7,13 @@ import {randomImg} from '../helpers/randomImage';
 
 function AddRestaurant () {
   const minDate = new Date ().toLocaleDateString ();
-  const restrictions = ['Takeout Only', 'Delivery Only']
-
+  const restrictions = ['Takeout Only', 'Delivery Only'];
 
   const [newRestaurant, setNewRestaurant] = useState ({
     name: '',
     description: '',
     phoneNumber: '',
-    openingTime:"",
+    openingTime: '',
     closingTime: '',
     price: '',
     cuisine: '',
@@ -23,23 +22,25 @@ function AddRestaurant () {
   });
   let history = useNavigate ();
 
-  const createNewRestaurant = async (newRes) => {
+  const createNewRestaurant = async newRes => {
     try {
-      await axios.post ('https://jeffrey-takehome-api.herokuapp.com/api/restaurants', newRes);
-      history('/');
+      await axios.post (
+        'https://jeffrey-takehome-api.herokuapp.com/api/restaurants',
+        newRes
+      );
+      history ('/');
       alert ('You just created a New Restaurant available');
     } catch (error) {
       return error;
     }
   };
 
-
   const handleChange = e => {
     setNewRestaurant ({...newRestaurant, [e.target.id]: e.target.value});
     // setRestriction(e.target.value)
   };
 
-  console.log(newRestaurant)
+  console.log (newRestaurant);
   const handleSubmit = e => {
     e.preventDefault ();
     createNewRestaurant (newRestaurant);
@@ -78,10 +79,10 @@ function AddRestaurant () {
 
         <input
           value={newRestaurant.phoneNumber}
-          type="text"
+          type="tel"
           id="phoneNumber"
           onChange={handleChange}
-          placeholder="Phone Number"
+          placeholder="123-456-7890"
           required
         />
 
@@ -94,9 +95,11 @@ function AddRestaurant () {
           type="text"
           id="openingTime"
           onChange={handleChange}
-          placeholder="hh:mm:ss"
-          required
+          placeholder="10:00:00"
+          pattern="[0-9]{2}:[0-9]{2}:[0-9]{2}"
         />
+
+        <div>Format: 10:00:00</div><br />
         <label htmlFor="closingTime">
           🕘 &nbsp; Closing:
         </label>
@@ -105,9 +108,11 @@ function AddRestaurant () {
           type="text"
           id="closingTime"
           onChange={handleChange}
-          placeholder="hh:mm:ss"
+          placeholder="10:00:00"
+          pattern="[0-9]{2}:[0-9]{2}:[0-9]{2}"
           required
         />
+        <div>Format: 20:00:00</div><br />
 
         <label htmlFor="location">
           Location:
@@ -148,24 +153,20 @@ function AddRestaurant () {
 
           Dining Restriction:
         </label>
-
-        {/* <input
-          value={newRestaurant.diningRestriction}
-          type="text"
+        <select
           id="diningRestriction"
           onChange={handleChange}
-          placeholder="Dining Restriction"
-          required
-        /> */}
-        
-          {/* <label htmlFor="category">Dining Restriction</label> */}
-          <select id="diningRestriction" onChange={handleChange} defaultValue="Select Dining Restriction">
+          defaultValue="Select Dining Restriction"
+        >
           <option disabled>Select Dining Restriction</option>
-          {restrictions.map(restriction => {
-            return <option key={restriction} value={restriction || null} >{restriction} </option>
+          {restrictions.map (restriction => {
+            return (
+              <option key={restriction} value={restriction || null}>
+                {restriction}{' '}
+              </option>
+            );
           })}
         </select>
-        
 
         <button className="submit-item-form" type="submit">
           Submit
