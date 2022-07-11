@@ -13,6 +13,9 @@ function NavBar({setSearchByRestaurant}) {
         <NavLink to="/">
           Home
         </NavLink>
+        <NavLink to="/toprestaurants">
+         Top Restaurant
+        </NavLink>
         <NavLink to="/restaurants/new">
           Add Restaurant
         </NavLink>
