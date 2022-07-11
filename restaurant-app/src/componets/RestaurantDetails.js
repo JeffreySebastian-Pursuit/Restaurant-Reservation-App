@@ -99,7 +99,6 @@ function RestaurantDetails () {
           {restaurant.name}
         </h1>
         <p className="description">
-
           {restaurant.description}
         </p>
 

@@ -8,7 +8,6 @@ function Restaurants () {
   const [searchByRestaurant, setSearchByRestaurant] = useState ('');
   const [loading, setLoading] = useState(false);
 
-
   const getAllRestaurants = async () => {
     try {
       let url = 'https://jeffrey-takehome-api.herokuapp.com/api/restaurants';

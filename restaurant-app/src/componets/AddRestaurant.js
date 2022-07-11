@@ -1,12 +1,12 @@
 import axios from 'axios';
 import {useState} from 'react';
 import {useNavigate} from 'react-router-dom';
-import moment from 'moment';
+// import moment from 'moment';
 import '../styles/AddRestaurant.css';
 import {randomImg} from '../helpers/randomImage';
 
 function AddRestaurant () {
-  const minDate = new Date ().toLocaleDateString ();
+  // const minDate = new Date ().toLocaleDateString ();
   const restrictions = ['Takeout Only', 'Delivery Only'];
 
   const [newRestaurant, setNewRestaurant] = useState ({
@@ -37,7 +37,6 @@ function AddRestaurant () {
 
   const handleChange = e => {
     setNewRestaurant ({...newRestaurant, [e.target.id]: e.target.value});
-    // setRestriction(e.target.value)
   };
 
   console.log (newRestaurant);
