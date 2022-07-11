@@ -30,14 +30,16 @@ function Restaurants () {
       { !loading && restaurants
         .filter (restaurant => {
             const restaurantName = restaurant?.name;
+            const restaurantCuisine =  restaurant?.cuisine
             if (searchByRestaurant === '') {
                 return restaurant;
             } else if (
-                restaurantName.toLowerCase ().includes(searchByRestaurant) 
+                restaurantName.toLowerCase ().includes(searchByRestaurant) || restaurantCuisine.toLowerCase ().includes(searchByRestaurant) 
                 ) {
                     return restaurant;
                 }
             })
+            
             .map (restaurant => {
                 return <RestaurantCard restaurant={restaurant} key={restaurant.id} />;
             })}
