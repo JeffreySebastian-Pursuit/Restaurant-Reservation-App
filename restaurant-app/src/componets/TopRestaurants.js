@@ -14,7 +14,7 @@ console.log(restaurants)
       {restaurants.map(restaurant => {
         if(restaurant.reservations.length >=1 && restaurant.reservations[0] !== null){
           return(
-            <div>
+            <div className='topRestaurants'>
               <Link exact to={`/restaurants/${restaurant.id}`}>
               <h3>{restaurant.name}</h3>
               </Link>
