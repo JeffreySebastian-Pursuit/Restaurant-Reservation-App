@@ -2,14 +2,8 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 
 function TopRestaurants({restaurants}) {
-
-
-
   
-console.log(restaurants)
   return (
-
-
     <div>
       {restaurants.map(restaurant => {
         if(restaurant.reservations.length >=1 && restaurant.reservations[0] !== null){
