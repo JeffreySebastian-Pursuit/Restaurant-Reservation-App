@@ -3,9 +3,11 @@ import {useState, useEffect} from 'react';
 import RestaurantCard from './RestaurantCard';
 import NavBar from '../navbar/NavBar';
 
+
 function Restaurants ({restaurants, loading}) {
  
   const [searchByRestaurant, setSearchByRestaurant] = useState ('');
+
 
 
   console.log (restaurants);
