@@ -3,23 +3,12 @@ import {useState, useEffect} from 'react';
 import RestaurantCard from './RestaurantCard';
 import NavBar from '../navbar/NavBar';
 
-function Restaurants () {
-  const [restaurants, setRestaurants] = useState ([]);
+
+function Restaurants ({restaurants, loading}) {
+ 
   const [searchByRestaurant, setSearchByRestaurant] = useState ('');
-  const [loading, setLoading] = useState(false);
 
-  const getAllRestaurants = async () => {
-    try {
-      let url = 'https://jeffrey-takehome-api.herokuapp.com/api/restaurants';
-      let res = await axios.get (`${url}`);
-      setRestaurants(res.data.restaurants);
-      setLoading(false)
-    } catch (error) {}
-  };
 
-  useEffect (() => {
-    getAllRestaurants ();
-  }, []);
 
   console.log (restaurants);
   return (
