@@ -11,7 +11,7 @@ function RestaurantCard({restaurant}) {
       <div className="box">
         <div className='content'>
 
-        <Link exact to={`restaurants/${restaurant.id}`}>
+        <Link exact to={`/restaurants/${restaurant.id}`}>
           <img src={randomImg} alt="pic" className='pic'/>
           <h1 className='title'>{restaurant.name}</h1>
           <p>{restaurant.cuisine}</p>
