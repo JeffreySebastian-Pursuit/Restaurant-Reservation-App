@@ -2,12 +2,12 @@ import React from 'react'
 import Restaurants from '../componets/Restaurants'
 import '../pages/Index'
 
-function Index({restaurants, loading}) {
+function Index() {
   return (
     
     <div className='Index'>
       <section >
-        <Restaurants  restaurants={restaurants} loading={loading}/>
+        <Restaurants />
       </section>
     </div>
   )
