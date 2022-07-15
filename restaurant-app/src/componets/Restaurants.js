@@ -28,8 +28,8 @@ function Restaurants () {
 <NavBar  setSearchByRestaurant={setSearchByRestaurant}/>
     <div className='main'>
       { !loading && restaurants
-      .sort((a ,b) => {
-         return a.name.toLowerCase() > b.name.toLowerCase() ? 1 : -1
+      .sort((restaurantA ,restaurantB) => {
+         return restaurantA.name.toLowerCase() > restaurantB.name.toLowerCase() ? 1 : -1
       })
         .filter (restaurant => {
             const restaurantName = restaurant?.name;
