@@ -10,11 +10,15 @@ function Restaurants ({restaurants, loading}) {
 
 
   console.log (restaurants);
+
   return (
       <div>
 <NavBar  setSearchByRestaurant={setSearchByRestaurant}/>
     <div className='main'>
       { !loading && restaurants
+      .sort((restaurantA ,restaurantB) => {
+         return restaurantA.name.toLowerCase() > restaurantB.name.toLowerCase() ? 1 : -1
+      })
         .filter (restaurant => {
             const restaurantName = restaurant?.name;
             const restaurantCuisine =  restaurant?.cuisine
