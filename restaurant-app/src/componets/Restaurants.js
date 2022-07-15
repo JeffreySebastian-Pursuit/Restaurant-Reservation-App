@@ -1,5 +1,4 @@
-import axios from 'axios';
-import {useState, useEffect} from 'react';
+import {useState} from 'react';
 import RestaurantCard from './RestaurantCard';
 import NavBar from '../navbar/NavBar';
 
