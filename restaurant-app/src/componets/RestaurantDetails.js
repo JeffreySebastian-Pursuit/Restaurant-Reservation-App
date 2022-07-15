@@ -43,6 +43,9 @@ function RestaurantDetails () {
     [id]
   );
 
+  // 11am -3pm lunch time
+  // 5-10pm dinner time
+  // console.log('mindate', minDate)
   const deleteRestaurant = async id => {
     try {
       let url = 'https://jeffrey-takehome-api.herokuapp.com/api/restaurants';
@@ -92,6 +95,27 @@ function RestaurantDetails () {
     numGuests,
   } = newReservation;
 
+  console.log('time', time)
+  const determineLunchOrDinnerTime = (time) => {
+    let t = time.split(' ');
+    let removeColon = t[1].replace(':', '');
+    let amOrPm = t[2];
+    let hour = Number(removeColon )
+  
+    if(amOrPm === 'pm'){
+      hour += 1200;
+    }
+    if(hour >=1100 && hour <= 1500){
+      console.log('Lunch Time')
+      return 'Lunch Time'
+    }else if(hour >= 1700 && hour <= 2200){
+      console.log('Dinner Time')
+      return 'Dinner Time'
+    }else{
+      return ' '
+    }
+  }
+  determineLunchOrDinnerTime(time)
   return (
     <div className="heading">
       <div className="lists">
